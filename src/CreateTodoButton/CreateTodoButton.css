@@ -1,0 +1,9 @@
+.CreateTodobutton {
+    background-color: rgb(57, 164, 196);
+    border: 2px solid rgb(10, 120, 154);
+    border-radius: 50%;
+    color: #ffffff;
+    height: 80px;
+    width: 80px;
+    border: none;
+}
