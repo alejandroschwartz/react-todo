@@ -6,40 +6,48 @@ import { TodoList } from '../TodoList';
 import { TodoItem } from '../TodoItem';
 import { TodoLoading } from '../TodoLoading';
 import { TodoError } from '../TodoError';
+import { TodoContext } from '../TodoContext';
+import { useContext } from 'react';
+import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm/TodoForm';
 
-function AppUI({
+function AppUI() {
+  const {
     loading,
     error,
-    completedTodos,
-    totalTodos,
-    searchValue,
-    setSearchValue,
     searchedTodos,
     completeTodos,
     deleteTodos,
-}) {
-    return (
-        <div className="App">
-          <TodoCounter completed={completedTodos} total={totalTodos}/>
-          <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
-          <TodoList>
-            {loading && <TodoLoading/>}
-            {error && <TodoError/>}
-            {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO</p>}
+    openModal,
+  } = useContext(TodoContext);
 
-            {searchedTodos.map(item => 
-              <TodoItem 
-                key={item.id}
-                item={item.text}
-                completed={item.completed}
-                onComplete={() => completeTodos(item.id)}
-                onDelete={() => deleteTodos(item.id)}
-              />
-            )}
-          </TodoList>
-          <CreateTodoButton/>
-        </div>
-    );
+  return (
+    <div className="App">
+      <TodoCounter />
+      <TodoSearch />
+      <TodoList>
+        {loading && <TodoLoading />}
+        {error && <TodoError />}
+        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO</p>}
+        {searchedTodos.map(item =>
+          <TodoItem
+            key={item.id}
+            item={item.text}
+            completed={item.completed}
+            onComplete={() => completeTodos(item.id)}
+            onDelete={() => deleteTodos(item.id)}
+          />
+        )}
+      </TodoList>
+      <CreateTodoButton />
+
+      {openModal && 
+        <Modal>
+          <TodoForm />
+        </Modal>
+      }
+    </div>
+  );
 };
 
 export { AppUI };

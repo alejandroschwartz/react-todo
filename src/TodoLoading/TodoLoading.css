@@ -1,0 +1,55 @@
+.TodoLoading__list {
+    border: '2px solid red';
+    margin: 0%;
+    padding: 0%;
+    height: 300px;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: -468px 0
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        background-position: 468px 0
+    }
+}
+
+.card-skeleton {
+    width: 640px;
+    height:48px;
+    margin-bottom: 6px;
+    border: 4px solid rgb(160, 160, 160);
+    position: relative;
+     float: left;
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    background: #fff;
+    z-index: 10;
+    /* padding: 15px; */
+    padding: 0%;
+    opacity: 1
+}
+
+.card-skeleton.hidden {
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    height: 0;
+    padding: 0
+}
+
+.animated-background {
+    will-change: transform;
+    animation: placeHolderShimmer 1s linear infinite forwards;
+    -webkit-backface-visibility: hidden;
+    background: #e6e6e6;
+    background: linear-gradient(90deg, #eee 8%, #ddd 18%, #eee 33%);
+    background-size: 800px 104px;
+    height: 100%;
+    position: relative
+}

@@ -1,0 +1,32 @@
+import React, { useContext, useState } from 'react';
+import './TodoForm.css';
+import { TodoContext } from '../TodoContext';
+
+function TodoForm() {
+    const {
+        addTodo,
+        setOpenModal,
+    } = useContext(TodoContext);
+    const [newTodoValue, setNewTodoValue] = useState('');
+    const handleText = (event) => {
+        setNewTodoValue(event.target.value);
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setOpenModal(false);
+        addTodo(newTodoValue);
+    };
+
+    return (
+        <form className="TodoForm__container" onSubmit={handleSubmit} >
+            <label className="TodoForm__label" >Escribe un nuevo TODO</label>
+            <textarea className="TodoForm__textarea" placeholder="Ej: Daily a las 10:30hs" value={newTodoValue} onChange={handleText} />
+            <div className="TodoForm__buttons" >
+                <button type="button" className="TodoForm__button-cancel" onClick={() => setOpenModal(false)} >Cerrar</button>
+                <button type="submit" className="TodoForm__button-save" onSubmit={handleSubmit} >Guardar</button>
+            </div>
+        </form>
+    )
+};
+
+export { TodoForm };
