@@ -1,5 +1,6 @@
+import React from 'react';
 import { useContext } from 'react';
-import './CreateTodoButton.css';
+import './CreateTodoButton.scss';
 import { TodoContext } from '../TodoContext';
 
 export function CreateTodoButton() {

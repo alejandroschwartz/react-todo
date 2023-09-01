@@ -1,4 +1,5 @@
-import './TodoItem.css';
+import React from 'react';
+import './TodoItem.scss';
 import { BsFillXCircleFill, BsFillCheckCircleFill } from 'react-icons/bs'
 
 export function TodoItem(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './TodoLoading.css';
+import './TodoLoading.scss';
 
 function TodoLoading() {
   return (<>
