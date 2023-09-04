@@ -1,3 +1,9 @@
 .TodoCounter__title {
     font-size: 36px;
 }
+
+@media only screen and (max-width: 640px) {
+    .TodoCounter__title {
+        font-size: 24px;
+    }
+}

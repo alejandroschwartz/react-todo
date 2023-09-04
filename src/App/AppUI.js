@@ -10,6 +10,8 @@ import { TodoContext } from '../TodoContext';
 import { useContext } from 'react';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm/TodoForm';
+import { Footer } from '../Footer';
+import { Header } from '../Header';
 
 function AppUI() {
   const {
@@ -23,12 +25,13 @@ function AppUI() {
 
   return (
     <div className="App">
+      <Header/>
       <TodoCounter />
       <TodoSearch />
       <TodoList>
         {loading && <TodoLoading />}
         {error && <TodoError />}
-        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer TODO</p>}
+        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer Tarea. <br/> Presiona el botón celeste de la esquina inferior derecha y comienza. </p>}
         {searchedTodos.map(item =>
           <TodoItem
             key={item.id}
@@ -46,6 +49,7 @@ function AppUI() {
           <TodoForm />
         </Modal>
       }
+      <Footer/>
     </div>
   );
 };

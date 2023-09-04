@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './TodoCounter.scss'
 import { TodoContext } from '../TodoContext';
+import { FaRegRectangleList } from 'react-icons/fa6';
 
 export function TodoCounter() {
     const {
@@ -10,14 +11,18 @@ export function TodoCounter() {
 
     return (
         <>
-            {completedTodos === totalTodos ?
+            { (completedTodos === totalTodos && totalTodos !== 0) ?
                 <p className="TodoCounter__title">
-                    Felicitaciones!!! Completaste todos los TODO's
+                    Felicidades! <br/> Completaste todas las tareas.
                 </p>
                 : 
-                <p className="TodoCounter__title">
-                    Ya completaste <strong>{completedTodos}</strong> de <strong>{totalTodos}</strong> todos
-                </p>
+                <>
+                    { totalTodos !== 0 &&
+                        <p className="TodoCounter__title">
+                            Completaste <strong>{completedTodos}</strong> de <strong>{totalTodos}</strong> tareas
+                        </p>
+                    }
+                </>
             }
         </>
     )

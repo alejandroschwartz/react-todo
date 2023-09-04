@@ -4,17 +4,22 @@ import { TodoContext } from '../TodoContext';
 
 export function TodoSearch() {
   const {
+    totalTodos,
     searchValue,
     setSearchValue,
   } = useContext(TodoContext);
 
-  return(
-    <input 
-      type="text" 
-      className="TodoSearch__input" 
-      placeholder="Buscar" 
-      value={searchValue}
-      onChange={(e) => setSearchValue(e.target.value)}
-    />
+  return (
+    <>
+      { totalTodos !== 0 &&
+        <input 
+          type="text" 
+          className="TodoSearch__input" 
+          placeholder="Buscar tarea" 
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
+      }
+    </>
   )
 }

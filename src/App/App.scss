@@ -1,3 +1,11 @@
 .App {
+  // border: 1px solid red;
+  width: 100%;
+  max-width: 940px;
+  height: 100vh;
+  padding: 0 8px;
+  margin: auto;
+  box-sizing: border-box;
+  overflow: auto;
   text-align: center;
 }

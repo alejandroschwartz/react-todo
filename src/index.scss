@@ -1,3 +1,19 @@
+@import url(https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap);
+
+$title-font: 'Lobster', cursive;
+$primary-font: 'Montserrat', sans-serif;
+
+$primary-color: #b4b4b4;        // Header - Footer
+$secondary-color: #111190;      // Btn item
+$thirth-color: #ffffff;         // Btn item hover
+
+$text-color: #e2e2e2;           // Header text color
+$text-title: #313434;           // #393e46;
+
+$background-primary: #ffffff;
+$background-secondary: #e2e2e2;
+$background-thirth: #313434;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
