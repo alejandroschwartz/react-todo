@@ -10,7 +10,7 @@ export function TodoSearch() {
   } = useContext(TodoContext);
 
   return (
-    <>
+    <div className='TodoSearch__container'>
       { totalTodos !== 0 &&
         <input 
           type="text" 
@@ -20,6 +20,6 @@ export function TodoSearch() {
           onChange={(e) => setSearchValue(e.target.value)}
         />
       }
-    </>
+    </div>
   )
 }

@@ -1,20 +1,30 @@
+@import "../index.scss";
+
 .TodoForm__container {
     padding: 4rem;
-    width: 100%;
     height: 100%;
     max-width: 640px;
     max-height: 480px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: $thirth-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 640px) {
+        padding: 2rem;
+        max-height: 320px;
+    }
 }
 
 .TodoForm__label {
     padding-bottom: 3rem;
     font-size: 2rem;
+
+    @media only screen and (max-width: 640px) {
+        font-size: 1.5rem;
+    }
 }
 
 .TodoForm__textarea {
@@ -24,6 +34,10 @@
     height: 100%;
     max-width: 480px;
     max-height: 260px;
+
+    @media only screen and (max-width: 640px) {
+        max-height: 140px;
+    }
 }
 
 .TodoForm__buttons {
@@ -31,6 +45,10 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+
+    @media only screen and (max-width: 640px) {
+        padding-bottom: 1rem;
+    }
 }
 
 .TodoForm__button-cancel {
@@ -40,6 +58,10 @@
     border-radius: 0.5rem;
     background-color: none;
     font-size: 1rem;
+
+    @media only screen and (max-width: 640px) {
+        width: 5rem;
+    }
 }
 
 .TodoForm__button-save {
@@ -49,4 +71,8 @@
     border-radius: 0.5rem;
     background-color: #5df7f7;
     font-size: 1rem;
+
+    @media only screen and (max-width: 640px) {
+        width: 5rem;
+    }
 }

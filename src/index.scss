@@ -3,12 +3,9 @@
 $title-font: 'Lobster', cursive;
 $primary-font: 'Montserrat', sans-serif;
 
-$primary-color: #b4b4b4;        // Header - Footer
+$primary-color: #313434;        // Header - Footer
 $secondary-color: #111190;      // Btn item
 $thirth-color: #ffffff;         // Btn item hover
-
-$text-color: #e2e2e2;           // Header text color
-$text-title: #313434;           // #393e46;
 
 $background-primary: #ffffff;
 $background-secondary: #e2e2e2;
@@ -21,7 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #ededed; */
+  color: $primary-color;
 }
 
 code {

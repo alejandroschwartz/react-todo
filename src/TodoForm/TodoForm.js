@@ -19,8 +19,8 @@ function TodoForm() {
 
     return (
         <form className="TodoForm__container" onSubmit={handleSubmit} >
-            <label className="TodoForm__label" >Escribe un nuevo TODO</label>
-            <textarea className="TodoForm__textarea" placeholder="Ej: Daily a las 10:30hs" value={newTodoValue} onChange={handleText} />
+            <label className="TodoForm__label" >Nueva tarea</label>
+            <textarea className="TodoForm__textarea" placeholder="Ej: Comprar lechuga" value={newTodoValue} onChange={handleText} />
             <div className="TodoForm__buttons" >
                 <button type="button" className="TodoForm__button-cancel" onClick={() => setOpenModal(false)} >Cerrar</button>
                 <button type="submit" className="TodoForm__button-save" onSubmit={handleSubmit} >Guardar</button>

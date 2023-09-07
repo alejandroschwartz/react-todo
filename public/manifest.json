@@ -1,6 +1,6 @@
 {
-  "short_name": "TO-DO de Ale",
-  "name": "Lista de tareas: TO-DO",
+  "short_name": "TAREAS de Ale",
+  "name": "Listando tareas - Ale Schwartz",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -1,11 +1,19 @@
+@import "../index.scss";
+
+.TodoSearch__container {
+    width: 80vw;
+    margin: auto;
+}
+
 .TodoSearch__input {
     width: 100%;
     overflow: hidden;
-    max-width: 940px;
     box-sizing: border-box;
+    max-width: 940px;
     padding: 24px 0 24px 32px;
+    margin: 0%;
     margin-bottom: 48px;
     height: 32px;
-    border: 2px solid #242424;
+    border: 2px solid $primary-color;
     font-size: 20px;
 }

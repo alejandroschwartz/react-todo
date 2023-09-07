@@ -20,6 +20,8 @@ export function TodoItem(props) {
                 }
             </span>
             <p className='TodoItem__text' >
+                {/* <small>04/09/2023 - 16hs - Hogar</small>
+                <br/> */}
                 {props.item}
             </p>
             <span onClick={props.onDelete}> 

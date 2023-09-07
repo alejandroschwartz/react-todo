@@ -11,12 +11,21 @@ export function CreateTodoButton() {
   } = useContext(TodoContext); 
 
   return (
-    <button 
-      className='CreateTodobutton'
-      title='Nuevo item'
-      onClick={() => setOpenModal(!openModal)}
-    >
-      <FaRegPenToSquare fontSize={32} />
-    </button>
+    // <button 
+    //   className='CreateTodobutton'
+    //   title='Nuevo item'
+    //   onClick={() => setOpenModal(!openModal)}
+    // >
+    //   <FaRegPenToSquare fontSize={32} />
+    // </button>
+      <div className="nav-container">
+        <button className="nav-button" title='Nuevo item' onClick={() => setOpenModal(!openModal)}>
+          <FaRegPenToSquare fontSize={32} />
+        </button>
+
+        {/* <div className="nav-list">
+            <FaRegPenToSquare fontSize={32} />
+        </div> */}
+    </div>
   )
 }
