@@ -1,58 +1,26 @@
 @import "../index.scss";
 
 .navbarItems {
-    box-sizing: border-box; 
-    padding: 0px 16px;
-    height: 64px;
-    margin-bottom: 48px;
-    background-color: $background-primary;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 60px;
+    width: 100%;
+    background-color: $color-primary;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-}
 
-.navbar__logo--link {
-    text-decoration: none;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid $color-secondary;
 }
-
 .navbar__logo {
-    color: $background-thirth;
+    color: $color-thirth;
     justify-self: start;
-    margin-left: 12px;
+    margin: 0;
     font-size: 28px;
-    font-family: $title-font;
+    font-family: $font-title;
     font-weight: 500;
     cursor: pointer;
-}
-
-.nav__menu {
-    margin: 0%;
-    padding: 0%;
-    object-fit: cover;
-    width: 78vw;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-}
-
-.nav__links {
-    font-family: $primary-font;
-    font-size: 18px;
-    font-weight: 600;
-    color: $background-thirth;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-
-.nav__links:hover {
-    color: $secondary-color;
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
-}
-
-.menu__icon {
-    display: none;
 }

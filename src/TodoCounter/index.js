@@ -17,9 +17,13 @@ export function TodoCounter() {
                 </p>
                 : 
                 <>
-                    { totalTodos !== 0 &&
+                    { totalTodos !== 0 ?
                         <p className="TodoCounter__title">
                             Completaste <strong>{completedTodos}</strong> de <strong>{totalTodos}</strong> tareas
+                        </p>
+                        :
+                        <p className="TodoCounter__title">
+                            No creaste tareas
                         </p>
                     }
                 </>

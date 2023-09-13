@@ -1,6 +1,6 @@
 {
   "name": "TO-DO app de Alejandro Schwartz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Realizo una todo app a partir de lo dado en el curso de React en Platzi",
   "main": "index.js",
   "scripts": {

@@ -7,19 +7,37 @@
     position: fixed;
     bottom: 0%;
     left: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    @media only screen and (max-width: 640px) {
+        border-top: 1px solid $color-secondary;
+        background-color: $color-primary;
+        height: 60px;
+    }
 }
 .nav-button {
     border: none;
     border-radius: 50%;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #3bbbe2;
-    color: #ffffff;
-    -webkit-box-shadow: 1px 2px 8px 4px rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 2px 8px 4px rgba(0,0,0,0.5);
-    box-shadow: 1px 2px 8px 4px rgba(0,0,0,0.5);
+    height: 5rem;
+    width: 5rem;
+    margin: 1.5rem;
+    background-color: $btn-primary;
+    color: $color-primary;
+    -webkit-box-shadow: 1px 2px 8px 4px $btn-primary-shadow;
+    -moz-box-shadow: 1px 2px 8px 4px $btn-primary-shadow;
+    box-shadow: 1px 2px 8px 4px $btn-primary-shadow;
 
-    :hover{
-        background-color: #3ad1ff;
+    @media only screen and (max-width: 640px) {
+        height: 3rem;
+        width: 3rem;
+        margin: 0;
     }
+}
+.nav__link {
+    width: 80px;
+    text-decoration: none;
+    color: $color-thirth;
+    font-size: 0.8rem;
 }

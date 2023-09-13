@@ -11,7 +11,7 @@ export function TodoSearch() {
 
   return (
     <div className='TodoSearch__container'>
-      { totalTodos !== 0 &&
+      {/* { totalTodos !== 0 && */}
         <input 
           type="text" 
           className="TodoSearch__input" 
@@ -19,7 +19,7 @@ export function TodoSearch() {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         />
-      }
+      {/* } */}
     </div>
   )
 }

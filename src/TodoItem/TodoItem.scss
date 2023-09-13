@@ -20,20 +20,20 @@
 }
 
 .TodoItem__check--true {
-    background-color: #ffffff;
-    border: 2px solid $primary-color;
-    color: $primary-color;
+    background-color: $color-primary;
+    border: 2px solid $color-thirth;
+    color: $color-thirth;
 }
 
 .TodoItem__check--false {
-    background-color: #ffffff;
+    background-color: $color-primary;
     border: 2px solid #3abc2e;
     color: #3abc2e;
     text-decoration: line-through;
 }
 
 .TodoItem__icon {
-    color: $primary-color;
+    color: $color-thirth;
     padding: 4px;
     font-size: 24px;
 }
@@ -46,8 +46,11 @@
     text-align: start;
     font-weight: 400;
     font-size: 24px;
+    text-overflow: ellipsis;
+	overflow: hidden;
 
     @media only screen and (max-width: 640px) {
+        padding-top: 4px;
         font-size: 18px;
     }
 }

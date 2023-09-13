@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 120px;
     left: 0;
     display: flex;
@@ -15,21 +15,21 @@
 
 .footer__text {
     margin: 0;
-    color: $primary-color;
-    font-family: $primary-font;
+    color: $color-thirth;
+    font-family: $font-text;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
     
     strong {
-        font-family: $title-font;
+        font-family: $font-title;
         font-size: 24px;
         font-weight: 400;
     }
 }
 
 .footer__media {
-    padding-top: 24px;
+    padding-top: 20px;
 }
 
 .footer__icon {

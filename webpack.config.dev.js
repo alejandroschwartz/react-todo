@@ -76,6 +76,6 @@ module.exports = {
         },
         compress: true,
         historyApiFallback: true,
-        port: 3009
+        port: 3000
     }
 }

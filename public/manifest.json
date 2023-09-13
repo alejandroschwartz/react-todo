@@ -1,11 +1,12 @@
 {
-  "short_name": "TAREAS de Ale",
+  "short_name": "LISTANDO TAREAS",
   "name": "Listando tareas - Ale Schwartz",
   "start_url": "/",
   "scope": "/",
+  "lang": "es-ES",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "prefer_related_applications": false,
   "related_applications": [],
   "icons": [
