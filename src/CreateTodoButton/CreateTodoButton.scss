@@ -8,10 +8,16 @@
     bottom: 0%;
     left: 0%;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
     
+    border-top: 1px solid $color-secondary;
+    background-color: $color-primary;
+    height: 80px;
+
     @media only screen and (max-width: 640px) {
+        justify-content: space-around;
+
         border-top: 1px solid $color-secondary;
         background-color: $color-primary;
         height: 60px;
@@ -20,9 +26,10 @@
 .nav-button {
     border: none;
     border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    margin: 1.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     background-color: $btn-primary;
     color: $color-primary;
     -webkit-box-shadow: 1px 2px 8px 4px $btn-primary-shadow;
@@ -40,4 +47,20 @@
     text-decoration: none;
     color: $color-thirth;
     font-size: 0.8rem;
+}
+.nav__todos {
+    width: 150px;
+    border: none;
+    color: $color-thirth;
+    background-color: $color-primary;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    @media only screen and (max-width: 640px) {
+        width: 80px;
+    }
 }

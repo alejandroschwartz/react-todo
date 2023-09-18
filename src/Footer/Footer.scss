@@ -30,8 +30,29 @@
 
 .footer__media {
     padding-top: 20px;
+    display: flex;
+
+    @media only screen and (max-width: 640px) {
+        flex-direction: column;
+    }
 }
 
 .footer__icon {
-    margin: 24px;
+    height: 2.5rem;
+    width: 10rem;
+    border: 2px solid $color-thirth;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    margin: 12px;
+    text-decoration: none;
+    color: $color-thirth;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    span {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
 }

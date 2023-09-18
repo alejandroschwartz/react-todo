@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-// const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -61,14 +60,6 @@ module.exports = {
                 }
             ]
         }),
-        // En DEV genera multiples veces, error workbox/issue/1790
-        //
-        // new WorkboxPlugin.GenerateSW({
-        //     // Aquí puedes configurar Workbox según tus necesidades
-        //     // Consulta la documentación de Workbox para más opciones de configuración
-        //     clientsClaim: true,
-        //     skipWaiting: true,
-        // }),
     ],
     devServer: {
         static: {

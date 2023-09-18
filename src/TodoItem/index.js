@@ -15,13 +15,11 @@ export function TodoItem(props) {
                     :
                     <FaRegCircle 
                         className='TodoItem__icon'
-                        title=''
+                        title='Incompleta'
                     />
                 }
             </span>
             <p className='TodoItem__text' >
-                {/* <small>04/09/2023 - 16hs - Hogar</small>
-                <br/> */}
                 {props.item}
             </p>
             <span onClick={props.onDelete}> 

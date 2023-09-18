@@ -11,9 +11,18 @@ function TodoProvider({ children }) {
         error,
     } = useLocalStorage('TODOS_V1', []);
     const [searchValue, setSearchValue] = useState('');
+    const [searchType, setSearchType] = useState('all');
     const totalTodos = todos.length;
     const completedTodos = todos.filter(todo => todo.completed === true).length;
-    const searchedTodos = todos.filter(todo => todo.text.toLowerCase().includes(searchValue.toLowerCase()));
+    const filteredTodos = todos.filter(todo => todo.text.toLowerCase().includes(searchValue.toLowerCase()));
+    let searchedTodos;
+    if(searchType === 'completed') {
+        searchedTodos = filteredTodos.filter(todo => todo.completed == true);
+    } else if(searchType === 'incompleted') {
+        searchedTodos = filteredTodos.filter(todo => todo.completed == false);
+    } else {
+        searchedTodos = filteredTodos;
+    };
 
     const completeTodos = (todoId) => {
         let newTodos = [...todos];
@@ -52,6 +61,8 @@ function TodoProvider({ children }) {
             openModal,
             setOpenModal,
             addTodo,
+            searchType,
+            setSearchType,
         }} >
             { children }
         </TodoContext.Provider>

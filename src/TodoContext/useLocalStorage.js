@@ -22,13 +22,20 @@ function useLocalStorage(itemName, initialValue) {
         setLoading(false);
         setError(true);
       }
-    }, 1500);
+    }, 600);
   }, []);
 
   const saveItem = (newTodos) => {
     localStorage.setItem(itemName, JSON.stringify(newTodos));
     setItem(newTodos);
   }
+
+  item.sort((a, b) => {
+    return a.text.localeCompare(b.text);
+  });
+  item.sort((a, b) => {
+    return a.completed.toString().localeCompare(b.completed.toString());
+  });
 
   return {
     item,
