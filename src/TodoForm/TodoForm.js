@@ -28,7 +28,7 @@ function TodoForm() {
             <label className="TodoForm__label" >Nueva tarea</label>
             <textarea 
                 className="TodoForm__textarea" 
-                placeholder="Ej: Comprar lechuga" 
+                placeholder="Ej Comprar tomate y lechuga" 
                 value={newTodoValue} 
                 onChange={handleText} 
             />

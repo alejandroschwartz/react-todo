@@ -33,7 +33,7 @@ function AppUI() {
       <TodoList>
         {loading && <TodoLoading />}
         {error && <TodoError />}
-        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer Tarea. <br/> Presiona el botón celeste de la esquina inferior y comienza. </p>}
+        {(!loading && searchedTodos.length === 0) && <p>Crea tu primer Tarea. <br/> Presiona el botón verde de la esquina inferior derecha y comienza. </p>}
         {searchedTodos.map(item =>
           <TodoItem
             key={item.id}
