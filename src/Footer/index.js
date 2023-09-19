@@ -10,15 +10,15 @@ export function Footer() {
             </p> 
             <div className='footer__media'>
                 <a className="footer__icon" href="https://www.linkedin.com/in/alejandro-matias-schwartz/">
-                    <FaLinkedin fontSize={36} color="#313434" />
+                    <FaLinkedin className='footer__svg' />
                     <span> Linkedin</span>
                 </a>
                 <a className="footer__icon" href="https://github.com/alejandroschwartz">
-                    <FaGithub fontSize={36} color="#313434" />
+                    <FaGithub className='footer__svg' />
                     <span> Github</span>
                 </a>
                 <a className="footer__icon" href='https://alejandroschwartz.com.ar/'>
-                    <FaChrome fontSize={36} />
+                    <FaChrome className='footer__svg' />
                     <span> Portfolio</span>
                 </a>
             </div>

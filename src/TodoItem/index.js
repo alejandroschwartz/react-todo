@@ -3,14 +3,14 @@ import './TodoItem.scss';
 import { FaCheck, FaRegCircle, FaXmark } from 'react-icons/fa6';
 
 export function TodoItem(props) {
+    console.log("🚀 ~ file: index.js:6 ~ TodoItem ~ props:", props)
     return (
         <li className={`TodoItem ${!props.completed ? " TodoItem__check--true " : " TodoItem__check--false "}`}>
             <span onClick={props.onComplete}> 
                 { props.completed ?
                     <FaCheck 
-                        className='TodoItem__icon'
+                        className={`TodoItem__icon ${!props.completed ? '' : 'check'} `}
                         title='Completar'
-                        color={`${!props.completed ? '' : '#3abc2e' }`}
                     />
                     :
                     <FaRegCircle 
@@ -19,13 +19,12 @@ export function TodoItem(props) {
                     />
                 }
             </span>
-            <p className='TodoItem__text' >
+            <p className={`TodoItem__text ${!props.completed ? '' : 'check'} `} >
                 {props.item}
             </p>
             <span onClick={props.onDelete}> 
                 <FaXmark 
-                    className='TodoItem__icon'
-                    color={`${!props.completed ? '' : '#3abc2e' }`}
+                    className={`TodoItem__icon ${!props.completed ? '' : 'check'} `}    
                 />
             </span>
         </li>

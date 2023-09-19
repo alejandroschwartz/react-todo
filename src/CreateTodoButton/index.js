@@ -22,24 +22,24 @@ export function CreateTodoButton() {
       <div className="nav-container">
         {valueType!=='all' &&
           <button className='nav__todos' onClick={() => setSearchType('all')}>
-            <FaListCheck fontSize={24} />
+            <FaListCheck className='nav__svg' />
             Todas
           </button>
         }
         {valueType!=='completed' &&
           <button className='nav__todos' onClick={() => setSearchType('completed')}>
-            <FaCheck fontSize={24} />
+            <FaCheck className='nav__svg' />
             Completas
           </button>
         }
         {valueType!=='incompleted' &&
           <button className='nav__todos' onClick={() => setSearchType('incompleted')}>
-            <FaRegCircle fontSize={24} />
+            <FaRegCircle className='nav__svg' />
             Incompletas
           </button>
         }
         <button className="nav-button" title='Nuevo item' onClick={() => setOpenModal(!openModal)}>
-          <FaRegPenToSquare fontSize={28} />
+          <FaRegPenToSquare className='nav__svg' />
         </button>
     </div>
   )

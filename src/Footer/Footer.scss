@@ -23,6 +23,7 @@
     
     strong {
         font-family: $font-title;
+        color: $color-3;
         font-size: 24px;
         font-weight: 400;
     }
@@ -54,5 +55,19 @@
     span {
         margin-left: 1rem;
         font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width: 640px) {
+        height: 2rem;
+        width: 9rem;
+        padding: 0.25rem;
+        padding-left: 0.75rem;
+    }
+}
+.footer__svg {
+    font-size: 2rem;
+
+    @media only screen and (max-width: 640px) {
+        font-size: 1.5rem;
     }
 }

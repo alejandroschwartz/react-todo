@@ -23,6 +23,8 @@ function AppUI() {
     openModal,
   } = useContext(TodoContext);
 
+  console.log("searchedTodos", searchedTodos);
+
   return (
     <div className="App">
       <Header/>

@@ -1,19 +1,25 @@
 @import url(https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap);
 
+$color-1: #EDF1D6;
+$color-2: #9DC08B;
+$color-3: #609966;
+$color-4: #40513B; 
+
+$color-success: $color-3;
+$color-danger: #ea0000;
+
 $font-title: 'Lobster', cursive;
 $font-text: 'Montserrat', sans-serif;
 
-$color-primary: #ffffff;
-$color-secondary: #e2e2e2;
-$color-thirth: #313434;
-
-$btn-primary: #3bbbe2;
-$btn-primary-shadow: rgba(59, 187, 226, 0.5);
+$color-primary: $color-1;
+$color-secondary: $color-2;
+$color-thirth: $color-4;
 
 body {
   margin: 0;
   padding: 0%;
   overflow-x: hidden;
   font-family: $font-text;
-  color: $color-thirth;
+  background-color: $color-1;
+  color: $color-4;
 }

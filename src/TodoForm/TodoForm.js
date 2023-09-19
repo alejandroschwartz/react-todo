@@ -14,7 +14,7 @@ function TodoForm() {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (newTodoValue.length > 3) {
+        if (newTodoValue.length > 2 && newTodoValue.length < 101 ) {
             setIsTodoVales(true);
             setOpenModal(false);
             addTodo(newTodoValue);
@@ -34,7 +34,7 @@ function TodoForm() {
             />
             {isTodoValid === false ?
                 <span className='TodoForm__validation' >
-                    Debe tener mas de 4 caracteres para guardar!
+                    <small>Debe tener de 3 a 100 caracteres para guardar!</small>
                 </span>
                 : <span className='TodoForm__valid' ></span>
             }
