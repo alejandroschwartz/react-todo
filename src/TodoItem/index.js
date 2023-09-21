@@ -3,7 +3,7 @@ import './TodoItem.scss';
 import { FaCheck, FaRegCircle, FaXmark } from 'react-icons/fa6';
 
 export function TodoItem(props) {
-    console.log("🚀 ~ file: index.js:6 ~ TodoItem ~ props:", props)
+
     return (
         <li className={`TodoItem ${!props.completed ? " TodoItem__check--true " : " TodoItem__check--false "}`}>
             <span onClick={props.onComplete}> 

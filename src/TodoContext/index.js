@@ -40,7 +40,8 @@ function TodoProvider({ children }) {
 
     const addTodo = (text) => {
         let newTodos = [...todos];
-        const lastId = newTodos.map(todo => todo.id).reduce((last, current) => current, null) + 1;
+        // const lastId = newTodos.map(todo => todo.id).reduce((last, current) => current, null) + 1;
+        const lastId = Math.random().toString(36).substring(0, 7);
         newTodos.push({id: lastId, text, completed: false});
         saveTodos(newTodos);
     };
