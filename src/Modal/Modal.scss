@@ -3,7 +3,8 @@
 .Modal__container {
     width: 100vw;
     height: 100vh;
-    background-color: #69696966;
+    background-color: rgba(105, 105, 105, 0.5);
     position: absolute;
     top: 0;
+    z-index: 2;
 }

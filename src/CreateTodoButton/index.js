@@ -20,25 +20,28 @@ export function CreateTodoButton() {
 
   return (
       <div className="nav-container">
-        {valueType!=='all' &&
-          <button className='nav__todos' onClick={() => setSearchType('all')}>
+        {
+          // valueType!=='all' &&
+          <button className='nav__todos' title='Ver todas' onClick={() => setSearchType('all')}>
             <FaListCheck className='nav__svg' />
-            Todas
+            {/* Todas */}
           </button>
         }
-        {valueType!=='completed' &&
-          <button className='nav__todos' onClick={() => setSearchType('completed')}>
+        {
+          // valueType!=='completed' &&
+          <button className='nav__todos' title='Ver completas' onClick={() => setSearchType('completed')}>
             <FaCheck className='nav__svg' />
-            Completas
+            {/* Completas */}
           </button>
         }
-        {valueType!=='incompleted' &&
-          <button className='nav__todos' onClick={() => setSearchType('incompleted')}>
+        {
+          // valueType!=='incompleted' &&
+          <button className='nav__todos' title='Ver incompletas' onClick={() => setSearchType('incompleted')}>
             <FaRegCircle className='nav__svg' />
-            Incompletas
+            {/* Incompletas */}
           </button>
         }
-        <button className="nav-button" title='Nuevo item' onClick={() => setOpenModal(!openModal)}>
+        <button className="nav-button" title='Crear tarea' onClick={() => setOpenModal(!openModal)}>
           <FaRegPenToSquare className='nav__svg' />
         </button>
     </div>

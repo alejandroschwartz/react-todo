@@ -5,6 +5,17 @@ $color-2: #9DC08B;
 $color-3: #609966;
 $color-4: #40513B; 
 
+// $color-4: #e1b6ee;
+// $color-3: #bd8fc9;
+// $color-2: #755080;
+// $color-1: #323247; 
+
+// $color-1-hover: #EDF1D6;
+// $color-2-hover: #a0d684;
+// $color-3-hover: #5eab66;
+// $color-4-hover: #4e6b46;
+
+
 $color-success: $color-3;
 $color-danger: #ea0000;
 
@@ -20,6 +31,6 @@ body {
   padding: 0%;
   overflow-x: hidden;
   font-family: $font-text;
-  background-color: $color-1;
+  // background-color: $color-1;
   color: $color-4;
 }

@@ -10,14 +10,13 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    border-top: 1px solid $color-secondary;
-    background-color: $color-primary;
+    border-top: 1px solid $color-2;
+    // background-color: #fff;
+    background-color: $color-1;
     height: 5rem;
 
     @media only screen and (max-width: 640px) {
         justify-content: space-around;
-        border-top: 1px solid $color-secondary;
-        background-color: $color-primary;
         height: 3.5rem;
     }
 }
@@ -30,7 +29,8 @@
     margin-right: 3rem;
     background-color: $color-3;
     color: $color-primary;
-    border: 0.25rem solid $color-2;
+    border: 0.25rem solid $color-3;
+    cursor: pointer;
 
     @media only screen and (max-width: 640px) {
         height: 3.25rem;
@@ -40,20 +40,38 @@
         margin-right: 0.5rem;
     }
 }
+.nav-button:hover {
+    // color: $color-3;
+    background-color: $color-2;
+    // border: 0.25rem solid $color-3;
+}
 .nav__todos {
-    width: 7rem;
+    // width: 5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
     border: none;
     color: $color-thirth;
-    background-color: $color-primary;
+    // background-color: #fff;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor: pointer;
+
+    // border: 2px solid $color-3;
+    border-radius: 0.4rem;
 
     @media only screen and (max-width: 640px) {
-        width: 5rem;
+        // width: 3rem;
+        // border: 1px solid $color-3;
+        padding: 0.5rem;
     }
+}
+.nav__todos:hover {
+    color: $color-3;
 }
 .nav__svg {
     font-size: 1.5rem;
