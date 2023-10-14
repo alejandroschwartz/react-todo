@@ -26,7 +26,8 @@
 }
 
 .TodoItem__check--false {
-    background-color: none;
+    // background-color: none;
+    background-color: $color-1;
     border: 2px solid $color-success;
     border-left: 0.5rem solid $color-success;
     
@@ -50,7 +51,7 @@
     margin: 0%;
     padding: 0%;
     width: 100%;
-    padding: 2px 24px;
+    padding-left: 1rem;
     text-align: start;
     font-weight: 400;
     font-size: 24px;
@@ -61,4 +62,12 @@
         padding-top: 6px;
         font-size: 18px;
     }
+}
+
+.TodoItem__badget {
+    width: 100%;
+    margin: 0%;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    text-align: start;
 }

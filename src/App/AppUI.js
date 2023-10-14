@@ -38,6 +38,7 @@ function AppUI() {
           <TodoItem
             key={item.id}
             item={item.text}
+            type={item.select}
             completed={item.completed}
             onComplete={() => completeTodos(item.id)}
             onDelete={() => deleteTodos(item.id)}
