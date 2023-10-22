@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -40,7 +41,11 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/,
                 type: "asset/resource"
-            }
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+            },
         ]
     },
     plugins: [
@@ -60,6 +65,7 @@ module.exports = {
                 }
             ]
         }),
+        new Dotenv(),
     ],
     devServer: {
         static: {

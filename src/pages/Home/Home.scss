@@ -1,0 +1,33 @@
+.Home__container {
+    height: 100vh;
+    // overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    // padding-bottom: 2rem;
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // align-items: center;
+}
+.Home__image {
+    margin: 0rem 1.5rem;
+    // margin-top: 5rem;
+}
+.Home__text {
+    margin: 0.5rem 1.5rem;
+    text-align: center;
+}
+.Home__link {
+    box-sizing: border-box;
+    // width: 90%;
+    margin: 0.6rem 1.5rem;
+    padding: 1rem 0rem;
+    background-color: #0059d6;
+    border: 1px solid #0059d6;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f2f2f2;
+}
