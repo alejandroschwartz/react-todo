@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { AppUI } from './AppUI';
-import { TodoProvider } from '../../TodoContext';
+import { TodoProvider } from '../../components/TodoContext';
 
 // localStorage.removeItem('TODOS_V1');
 // const defaultTodos = [

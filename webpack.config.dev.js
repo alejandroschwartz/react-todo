@@ -12,7 +12,11 @@ module.exports = {
         publicPath: '/',
     },
     resolve: {
-        extensions: ['.js' , '.jsx']
+        extensions: ['*', '.js' , '.jsx'],
+        alias: {
+			src: path.resolve(__dirname, 'src/'),
+            Config: path.resolve(__dirname, 'src/env.js'),
+        }
     },
     mode: 'development',
     module: {

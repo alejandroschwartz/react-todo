@@ -15,11 +15,12 @@ module.exports = {
         publicPath: "/",
     },
     resolve: {
-        extensions: ['.js' , '.jsx'],
-        // alias: {
-        //     '@components': path.resolve(__dirname, 'src/components/'),
-        //     '@styles': path.resolve(__dirname, 'src/styles/'),
-        // }
+        extensions: ['*', '.js' , '.jsx'],
+        alias: {
+            src: path.resolve(__dirname, 'src/'),
+            Config: path.resolve(__dirname, 'src/env.js'),
+            '@components': path.resolve(__dirname, 'src/components/'),
+        }
     },
     mode: 'production',
     module: {
