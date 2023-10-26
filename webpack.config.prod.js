@@ -7,8 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
-const Dotenv = require('dotenv-webpack');
-
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -78,7 +76,6 @@ module.exports = {
             skipWaiting: true,
         }),
         new CleanWebpackPlugin(),
-        new Dotenv(),
     ],
     devServer: {
         static: {
