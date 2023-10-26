@@ -19,6 +19,7 @@ export const Auth0ProviderWithNavigate = ({ children }) => {
       : window.location.origin;
 
   console.log("window", window.location);
+  console.log("domain", domain, "clienId", clientId, "redirectUri", redirectUri)
 
   const onRedirectCallback = (appState) => {
     navigate(appState?.returnTo || window.location.pathname);
@@ -28,7 +29,6 @@ export const Auth0ProviderWithNavigate = ({ children }) => {
     return null;
   }
 
-  console.log("domain", domain, "clienId", clientId, "redirectUri", redirectUri)
 
   return (
     <Auth0Provider
