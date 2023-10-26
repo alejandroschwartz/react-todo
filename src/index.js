@@ -8,18 +8,25 @@ import { Home } from './pages/Home'
 import { ProtectedRoute } from './components/login/ProtectedRoute';
 import './index.scss';
 
+
+
+// console.log("env", env.NODE_ENV);
+// const domain = process.env.REACT_APP_AUTH0_DOMAIN  || 'default_api_domain';
+// const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID || 'default_api_key';
+// console.log("domain", domain, "clienId", clientId, "redirectUri", redirectUri)
+// console.log("window", window.location);
+// console.log("SERVER_DATA", window?.SERVER_DATA ?? 'hola');
+
 export const Auth0ProviderWithNavigate = ({ children }) => {
   const navigate = useNavigate();
 
-  const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+  const domain = process.env.REACT_APP_AUTH0_DOMAIN  || 'default_api_domain';
+  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID || 'default_api_key';
   const redirectUri =
     process.env.REACT_APP_VERCEL_ENV === "production"
       ? `https://${window.location.hostname}/callback`
       : window.location.origin;
 
-  console.log("window", window.location);
-  console.log("domain", domain, "clienId", clientId, "redirectUri", redirectUri)
 
   const onRedirectCallback = (appState) => {
     navigate(appState?.returnTo || window.location.pathname);

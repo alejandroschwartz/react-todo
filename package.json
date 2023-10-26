@@ -4,9 +4,8 @@
   "description": "Realizo una todo app a partir de lo dado en el curso de React en Platzi",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "start": "webpack serve --config webpack.config.dev.js  --env NODE_ENV=development",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "Alejandro Matias Schwartz",
@@ -44,5 +43,17 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "workbox-webpack-plugin": "^7.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
