@@ -12,7 +12,7 @@ import { TodoProvider } from '../../components/TodoContext';
 // ];
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 
-export function App() {
+export function Todo() {
 
   return (
     <TodoProvider>

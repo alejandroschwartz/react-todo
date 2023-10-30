@@ -1,90 +1,20 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import _ from 'lodash';
-import { Auth0Provider } from '@auth0/auth0-react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import { App } from './pages/App/index';
-import { Home } from './pages/Home'
-import { ProtectedRoute } from './components/login/ProtectedRoute';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from './app'
+import { Auth0ProviderWithNavigate } from './Auth0ProviderWithNavigate';
 import './index.scss';
 
-
-
-// console.log("env", env.NODE_ENV);
-// const domain = process.env.REACT_APP_AUTH0_DOMAIN  || 'default_api_domain';
-// const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID || 'default_api_key';
-// console.log("domain", domain, "clienId", clientId, "redirectUri", redirectUri)
-// console.log("window", window.location);
-// console.log("SERVER_DATA", window?.SERVER_DATA ?? 'hola');
-
-export const Auth0ProviderWithNavigate = ({ children }) => {
-  const navigate = useNavigate();
-
-  const domain = process.env.REACT_APP_AUTH0_DOMAIN  || 'default_api_domain';
-  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID || 'default_api_key';
-  const redirectUri =
-    process.env.REACT_APP_VERCEL_ENV === "production"
-      ? `https://${window.location.hostname}`
-      : window.location.origin;
-
-
-  const onRedirectCallback = (appState) => {
-    navigate(appState?.returnTo || window.location.pathname);
-  };
-
-  if (!(domain && clientId && redirectUri)) {
-    return null;
-  }
-
-
-  return (
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      // redirectUri={redirectUri}
-      // onRedirectCallback={onRedirectCallback}
-      authorizationParams={{ redirect_uri: redirectUri }}
-    >
-      {children}
-    </Auth0Provider>
-  );
-};
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
   <BrowserRouter>
     <Auth0ProviderWithNavigate>
-      
-      <Routes>
-        <Route path='/' element={ <Home/> } />
-        <Route element={<ProtectedRoute />} >
-          <Route path='/app' element={ <App/> } />
-          <Route path='*' element={ <App/> } />
-        </Route>
-      </Routes>
-
+      <App/>
     </Auth0ProviderWithNavigate>
   </BrowserRouter>
-
-
-  // <Auth0Provider
-  //   domain={domain}
-  //   clientId={clientId}
-  //   redirectUri={redirectUri}
-  //   onRedirectCallback={onRedirectCallback}
-  //   // authorizationParams={{ redirect_uri: window.location.origin }}
-  // >
-  //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path='/' element={ <Home/> } />
-  //       <Route element={<ProtectedRoute />} >
-  //         <Route path='/app' element={ <App/> } />
-  //         <Route path='*' element={ <App/> } />
-  //       </Route>
-  //     </Routes>
-  //   </BrowserRouter>
-  // </Auth0Provider>,
 );
 
 if ('serviceWorker' in navigator) {

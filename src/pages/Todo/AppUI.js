@@ -12,7 +12,6 @@ import { Modal } from '../../components/Modal';
 import { TodoForm } from '../../components/TodoForm/TodoForm';
 import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
-import Login from '../../components/login/Login';
 import { Link } from 'react-router-dom';
 import Profile from '../../components/login/Profile';
 import LogoutButton from '../../components/login/LogoutButton';
@@ -31,16 +30,6 @@ function AppUI() {
   console.log("searchedTodos", searchedTodos);
 
   return (
-  <div className='App__container' >
-    <div className='App__aside'>
-      <div className='Home__container'>
-        <Profile/>
-        <Link to={'/app'} className='Home__link' >
-            Tareas
-        </Link>
-        <LogoutButton/>
-      </div>
-    </div>
     <div className="App">
       <Header/>
       <TodoCounter />
@@ -69,7 +58,6 @@ function AppUI() {
       }
       <Footer/>
     </div>
-  </div>);
-};
+)};
 
 export { AppUI };

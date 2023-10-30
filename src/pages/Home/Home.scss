@@ -1,6 +1,7 @@
 @import "../../index.scss";
 
 .Home__container {
+    // border: 2px solid blue;
     height: 100vh;
     max-width: 640px;
     margin: auto;
@@ -22,7 +23,7 @@
     font-size: 1.2rem;
     color: $color-3;
 }
-.Home_loading {
+.Home__loading {
     margin: auto;
     height: 100vh;
     display: flex;
@@ -30,7 +31,7 @@
     justify-content: center;
     align-items: center;
 }
-.Home_loading--img {
+.Home__loading--img {
     width: 6rem;
     margin-bottom: 1.5rem;
 }

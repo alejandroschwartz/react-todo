@@ -11,7 +11,7 @@ const LogoutButton = () => {
         className='LogoutButton__button'
         onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
       >
-        Cerrar seción
+        Cerrar sesión
       </button>
     </div>
   );
