@@ -12,9 +12,6 @@ import { Modal } from '../../components/Modal';
 import { TodoForm } from '../../components/TodoForm/TodoForm';
 import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
-import { Link } from 'react-router-dom';
-import Profile from '../../components/login/Profile';
-import LogoutButton from '../../components/login/LogoutButton';
 import '../Home/Home.scss'
 
 function AppUI() {

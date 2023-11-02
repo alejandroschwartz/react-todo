@@ -7,7 +7,7 @@ const Login = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <>
+    <div className='Home__container'>
       <div className='Login__image'>
           <SvgStudy />
       </div>
@@ -28,7 +28,7 @@ const Login = () => {
           Iniciar sesión
         </button>
       </div>
-    </>)
+    </div>)
 };
 
 export default Login;
